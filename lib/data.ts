@@ -1,0 +1,20 @@
+export type Phase = "preSubmission" | "submissionOpen" | "judgingOpen" | "winnersAnnounced";
+export const currentPhase: Phase = "submissionOpen";
+
+export const categories = ["North Star", "Pathfinder", "Blueprint", "Craftsman", "Catalyst", "Pursuit", "Transformation"];
+export const deliverableTypes = ["Journey Map", "Service Blueprint", "Prototype", "UI Design", "Research Summary", "Workshop", "Operating Model", "Dashboard", "Pitch Deck", "Vision Deck", "Strategy Deck", "Brand System", "Website Design", "App Design", "Personas"];
+
+export const projects = [
+  { id: 1, title: "Future Associate Digital Experience", client: "Fidelity Investment", year: 2025, industry: "Financial Services", market: "Boston", category: "Transformation", status: "Winner", deliverables: ["Vision Deck", "Prototype", "Service Blueprint"], tags: ["employee experience", "platform strategy", "service design"], summary: "An end-to-end transformation vision for a future associate digital experience.", impact: "Created a shared experience system and executive-ready roadmap for transformation.", accent: "from-indigo-950 via-zinc-950 to-rose-500", thumbnail: "/thumbnails/fidelity.png", },
+  { id: 2, title: "Likemind Behavioral Health", client: "Baylor Scott & White", year: 2025, industry: "Healthcare", market: "Dallas", category: "Blueprint", status: "Winner", deliverables: ["Service Blueprint", "Journey Map", "Personas"], tags: ["behavioral health", "journey mapping", "operating model"], summary: "A cross-functional blueprint for delivering behavioral health experiences across people, process, and technology.", impact: "Aligned teams around key moments, pain points, and operational enablers.", accent: "from-stone-950 via-emerald-950 to-amber-500", thumbnail: "/thumbnails/baylor.png", },
+  { id: 3, title: "CX Research, Strategy, & Roadmap", client: "Enterprise Truck Rental", year: 2025, industry: "Retail", market: "Chicago", category: "Pathfinder", status: "Winner", deliverables: ["Research Summary", "Workshop", "Strategy Deck"], tags: ["research", "roadmap", "customer insights"], summary: "Research-led strategy work that clarified customer needs and charted a path forward.", impact: "Converted complex discovery into a prioritized CX roadmap.", accent: "from-zinc-900 via-red-950 to-lime-700", thumbnail: "/thumbnails/fidelity.png", },
+  { id: 4, title: "Yellow Fin Tuna", client: "Hertz", year: 2025, industry: "Travel & Hospitality", market: "New York", category: "Pursuit", status: "Finalist", deliverables: ["Pitch Deck", "Vision Deck", "Prototype"], tags: ["proposal", "retail", "future vision"], summary: "A bold pursuit concept for the future of retail experience.", impact: "Helped open the door to a transformational client conversation.", accent: "from-zinc-950 via-yellow-900 to-yellow-400", thumbnail: "/thumbnails/fidelity.png", },
+  { id: 5, title: "Mobile App Experience", client: "Hertz", year: 2025, industry: "Travel & Hospitality", market: "Atlanta", category: "Craftsman", status: "Finalist", deliverables: ["App Design", "UI Design", "Prototype"], tags: ["mobile", "interaction design", "craft"], summary: "A polished mobile app experience focused on practical customer utility.", impact: "Translated vision into tangible screens, flows, and prototypes.", accent: "from-neutral-950 via-blue-950 to-cyan-400", thumbnail: "/thumbnails/fidelity.png", },
+  { id: 6, title: "eCommerce Product Insights", client: "Royal Caribbean", year: 2025, industry: "Travel & Hospitality", market: "Miami", category: "Catalyst", status: "Winner", deliverables: ["Research Summary", "Dashboard", "Framework"], tags: ["research practice", "product insights", "accelerator"], summary: "A reusable insights practice and product research framework.", impact: "Created momentum and consistency across future product decisions.", accent: "from-blue-950 via-zinc-950 to-sky-400", thumbnail: "/thumbnails/fidelity.png", }
+];
+
+export const judges = [
+  { name: "Alex Morgan", assigned: [1, 2, 4], completed: [1] },
+  { name: "Taylor Chen", assigned: [2, 3, 5], completed: [2, 3] },
+  { name: "Jordan Lee", assigned: [1, 4, 6], completed: [] }
+];
