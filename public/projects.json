@@ -1,0 +1,25 @@
+[
+  {
+    "id": "testing-concats",
+    "title": "testing concats",
+    "client": "",
+    "year": 2026,
+    "industry": "Healthcare",
+    "market": "",
+    "category": "North Star",
+    "status": "Submitted",
+    "deliverables": ["baylor_Laura Adesoro.png", "fidelity_Laura Adesoro.png", "Journey Map Slides_Laura Adesoro 2.pptx"],
+    "tags": ["Prototype", "Journey Map"],
+    "summary": "Test project from the Microsoft Form and Power Automate pipeline.",
+    "impact": "",
+    "cxCapability": "Product Design",
+    "teamMembers": "Laura Adesoro",
+    "projectFolderLink": "https://twodegrees1.sharepoint.com/teams/EmeraldAwardsTest/Projects/Forms/AllItems.aspx?id=%2Fteams%2FEmeraldAwardsTest%2FProjects%2F2026%2Ftesting%2Dconcats",
+    "deliverableLinks": [
+      [{"name":"baylor_Laura Adesoro.png","url":"https://twodegrees1.sharepoint.com/teams/EmeraldAwardsTest/Projects/Forms/AllItems.aspx?id=%2Fteams%2FEmeraldAwardsTest%2FProjects%2F2026%2Ftesting-individual-file-links%2FDeliverables%2Fbaylor_Laura%20Adesoro.png"},{"name":"fidelity_Laura Adesoro.png","url":"https://twodegrees1.sharepoint.com/teams/EmeraldAwardsTest/Projects/Forms/AllItems.aspx?id=%2Fteams%2FEmeraldAwardsTest%2FProjects%2F2026%2Ftesting-individual-file-links%2FDeliverables%2Ffidelity_Laura%20Adesoro.png"},{"name":"Journey Map Slides_Laura Adesoro 2.pptx","url":"https://twodegrees1.sharepoint.com/teams/EmeraldAwardsTest/Projects/Forms/AllItems.aspx?id=%2Fteams%2FEmeraldAwardsTest%2FProjects%2F2026%2Ftesting-individual-file-links%2FDeliverables%2FJourney%20Map%20Slides_Laura%20Adesoro%202.pptx"}]
+
+    ],
+    "thumbnail": "/thumbnails/baylor.png",
+    "accent": "from-stone-950 via-emerald-950 to-amber-500"
+  }
+]
