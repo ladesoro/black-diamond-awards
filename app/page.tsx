@@ -1,14 +1,55 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, SlidersHorizontal, Trophy, Upload, LockKeyhole, ArrowRight } from "lucide-react";
 import { ProjectDrawer } from "@/components/ProjectDrawer";
-import { categories, currentPhase, deliverableTypes, projects } from "@/lib/data";
+import { categories, currentPhase, deliverableTypes, projects as fallbackProjects } from "@/lib/data";
+
+type Project = {
+  id: string | number;
+  title: string;
+  client: string;
+  year: number;
+  industry: string;
+  market: string;
+  category: string;
+  status: string;
+  deliverables: string[];
+  tags: string[];
+  summary: string;
+  impact: string;
+  accent: string;
+  thumbnail?: string;
+  cxCapability?: string;
+  teamMembers?: string;
+  projectFolderLink?: string;
+  deliverableLinks?: {
+    name: string;
+    url: string;
+  }[];
+};
 
 export default function Home() {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("All");
-  const [status, setStatus] = useState("All");
-  const [selected, setSelected] = useState<typeof projects[number] | null>(null);
+const [projects, setProjects] = useState<Project[]>(fallbackProjects as Project[]);
+const [query, setQuery] = useState("");
+const [category, setCategory] = useState("All");
+const [status, setStatus] = useState("All");
+const [selected, setSelected] = useState<Project | null>(null);
+
+useEffect(() => {
+  fetch("/projects.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Could not load projects.json");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setProjects(data);
+    })
+    .catch((error) => {
+      console.warn("Using fallback project data:", error);
+    });
+}, []);
 
   const filtered = useMemo(() => projects.filter((p) => {
     const text = [p.title, p.client, p.industry, p.market, p.category, p.status, ...p.tags, ...p.deliverables].join(" ").toLowerCase();
