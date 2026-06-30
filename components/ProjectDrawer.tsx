@@ -1,8 +1,31 @@
 "use client";
 import { X, ExternalLink, Trophy } from "lucide-react";
-import { projects } from "@/lib/data";
 
-type Project = typeof projects[number];
+
+type Project = {
+  id: string | number;
+  title: string;
+  client?: string;
+  year: number;
+  industry: string;
+  market?: string;
+  category: string;
+  status: string;
+  deliverables: string[];
+  tags: string[];
+  summary: string;
+  impact?: string;
+  accent: string;
+  thumbnail?: string;
+  cxCapability?: string;
+  teamMembers?: string;
+  projectFolderLink?: string;
+  deliverableLinks?: {
+    name: string;
+    url: string;
+  }[];
+};
+
 export function ProjectDrawer({ project, onClose }: { project: Project | null; onClose: () => void }) {
   if (!project) return null;
   return <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm" onClick={onClose}>
